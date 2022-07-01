@@ -5,12 +5,12 @@ def stock_picker(array)
   best_profit = array[1] - array[0]
   min = array[0]
 
-  array.each_with_index do |number,index|
+  array.each_with_index do |number, index|
     next if index.zero?
 
     if number - min > best_profit
       best_profit = number - min
-      best_days = [array.find_index(min),index]
+      best_days = [array.find_index(min), index]
     end
 
     min = number if number < min
